@@ -1,0 +1,14 @@
+@use "global" as *;
+
+
+.header {
+    width: 100%;
+    height: rem(80);
+    position: relative;
+}
+
+.header__nav-button {
+    position: absolute;
+    top: rem(33);
+    right: rem(30);
+}

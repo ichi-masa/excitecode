@@ -28,28 +28,87 @@
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-  <header>
+  <header class="header">
+    <!-- <h1 class="header__logo"><img src="./assets/images/common/logo-white.png" alt="ExciteCode"></h1> -->
+    <div class="header__nav-button hamburger u-mobile">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="header__sp-nav sp-nav u-mobile">
+      <ul class="sp-nav__items">
+        <li class="sp-nav__items"><a href="#" class="sp-nav__link">top</a></li>
+        <li class="sp-nav__items"><a href="#" class="sp-nav__link">about</a></li>
+        <li class="sp-nav__items"><a href="#" class="sp-nav__link">service</a></li>
+        <li class="sp-nav__items"><a href="#" class="sp-nav__link">works</a></li>
+        <li class="sp-nav__items"><a href="#" class="sp-nav__link">news</a></li>
+        <li class="sp-nav__items"><a href="#" class="sp-nav__link">contact</a></li>
+        <li class="sp-nav__items"><a href="#" class="sp-nav__link">プライバシーポリシー</a></li>
+      </ul>
+    </div> <!-- header__sp-nav -->
+    <div class="header__pc-nav u-desktop">
+      
 
+    </div> <!-- header__pc-nav -->
   </header>
   <main>
 
 
+
+    <!-- section-title -->
+    <h2 class="section-title">
+      service
+    </h2>
     <!-- service-card -->
     <div class="service-card">
-      <div class="service-card__title-block">
-        <div class="service-card__title-number">Service01</div>
-        <h3 class="service-card__title">購入サポート</h3>
+      <div class="service-card__top">
+        <div class="service-card__title-block">
+          <div class="service-card__title-number">Service01</div>
+          <h3 class="service-card__title">購入サポート</h3>
+        </div>
+        <div class="service-card__image"><img src="./assets/images/common/service1.jpg" alt="白いスポーツカー"></div>
       </div>
-      <div class="service-card__image"><img src="./assets/images/common/service1.jpg" alt="白いスポーツカー"></div>
-      <div class="service-card__text">
-        国を超え、メーカーを超え、高級の本質をお届けする特別な一台との出会いをサポートします。
+      <div class="service-card__bottom">
+        <div class="service-card__text">
+          国を超え、メーカーを超え、高級の本質をお届けする特別な一台との出会いをサポートします。
+        </div>
+        <div class="service-card__border">
+          <a href="#" class="button-border">
+            <span>read more</span>
+          </a>
+        </div>
       </div>
-      <a href="#" class="service-card__button readmore-button">
-        <span>read more</span>
-      </a>
     </div>
+    <!-- works-card -->
+    <div class="works-card">
+      <div class="works-card__wrapper">
+        <div class="works-card__image">
+          <img src="./assets/images/common/works1.jpg" alt="車の鍵を閉めている写真">
+        </div>
+        <div class="works-card__information">
+          <div class="works-card__category">修理・整備</div>
+          <h3 class="works-card__title">
+            車のドアが開けられなくなった｜ドアロックの交換と...
+          </h3>
+          <div class="works-card__text u-desktop">
+            弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
+          </div>
+          <time class="works-card__date" datetime="2022-09-02">2022.09.02</time>
+        </div>
+      </div>
+    </div>
+
+    <!-- 下層ページのfv -->
+    <div class="page-fv">
+      <div class="page-fv__title-block">
+        <div class="page-fv__main-title">about</div>
+        <h2 class="page-fv__sub-title">私たちについて</h2>
+      </div>
+      <div class="page-fv__image"><img src="./assets/images/about/about-fv.jpg" alt="自動車展示場で車が並んでいる写真"></div>
+    </div>
+
     <!-- readmore-button -->
-    <a href="#" class="readmore-button">
+    <a href="#" class="button">
       <span>read more</span>
     </a>
   </main>

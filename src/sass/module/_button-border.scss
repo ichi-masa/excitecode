@@ -1,8 +1,8 @@
 @use "global" as *;
 
-.readmore-button {
+.button-border {
     display: inline-block;
-    color: $navy;
+    color: $navy-font;
     text-transform: uppercase;
     font-size: rem(14);
     font-weight: $medium;
@@ -14,11 +14,28 @@
 }
 
 
-.readmore-button span {
+.button-border span {
     position: relative;
 }
 
-.readmore-button span::after {
+.button-border span::before {
+    position: absolute;
+    bottom: rem(-4);
+    left: 0;
+    content: '';
+    width: 100%;
+    height: rem(1);
+    background-color: $navy;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: all 0.3s;
+}
+
+.button-border span:hover::before {
+    transform: scale(1, 1);
+}
+
+.button-border span::after {
     position: absolute;
     content: '';
     width: rem(6.5);
@@ -28,4 +45,9 @@
     transform:  translateY(-50%) rotate(45deg);
     top: 50%;
     right: rem(-10);
+    transition: all 0.3s 0.3s;
+}
+
+.button-border span:hover::after {
+    right: rem(-12);
 }

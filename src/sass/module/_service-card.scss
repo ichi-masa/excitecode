@@ -1,1 +1,63 @@
 @use "global" as *;
+
+.service-card {
+    width: rem(335); //仮
+}
+
+.service-card__top {
+    position: relative;
+}
+
+.service-card__title-block {
+    color: $white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: rem(30); //比率必要？
+}
+
+.service-card__title-number {
+    font-family: $english-main-font-family;
+    font-size: rem(16);
+    font-weight: $bold;
+}
+
+.service-card__title {
+    font-size: rem(26);
+    font-weight: $bold;
+    margin-top: rem(10);
+}
+
+.service-card__image {
+    aspect-ratio: 335 / 170;
+    overflow: hidden;
+}
+
+.service-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-card__bottom {
+    @include mq(md) {
+        margin-right: rem(20);
+    }
+}
+
+.service-card__text {
+    margin-top: rem(20);
+    font-size: rem(14);
+    font-weight: $normal;
+    line-height: 2.286;
+
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: 2.375;
+    }
+}
+
+.service-card__button {
+    margin-top: rem(20);
+    text-align: right;
+}
