@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.readmore-button {
+    display: inline-block;
+    color: $navy;
+    text-transform: uppercase;
+    font-size: rem(14);
+    font-weight: $medium;
+    line-height: 1;
+    font-family: $english-sub-font-family;
+    padding: rem(14) rem(39) rem(14) rem(24);
+    border: 1px solid $navy;
+    border-radius: rem(5);
+}
+
+
+.readmore-button span {
+    position: relative;
+}
+
+.readmore-button span::after {
+    position: absolute;
+    content: '';
+    width: rem(6.5);
+    height: rem(6.5);
+    border-right: 1px solid $navy;
+    border-top: 1px solid $navy;
+    transform:  translateY(-50%) rotate(45deg);
+    top: 50%;
+    right: rem(-10);
+}
