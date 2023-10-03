@@ -18,9 +18,6 @@ $english-main-font-family: 'Oswald', sans-serif;
 $english-sub-font-family: 'Roboto', sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
 
-body {
-  font-family: $japanese-font-family;
-}
 
 // フォントウェイト
 $normal: 400;
@@ -37,6 +34,15 @@ $white: #ffffff;
 $beige-bg: #F8F8F8;
 $navy: #011950;
 $navy-font: #001E63;
-$navy-footer-bg: #001135;
+$navy-bg: #001135;
 $gray: #626262;
 $lightgray: #A9A9A9;
+
+body {
+  font-family: $japanese-font-family;
+}
+
+body.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}

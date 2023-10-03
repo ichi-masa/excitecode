@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.mainview {
+    width: 100%;
+    height: calc(100vh + rem(80));
+    position: relative;
+    top: rem(-80);
+
+    @include mq(md) {
+        height: calc(100vh - rem(80));
+        top: 0;
+    }
+}
+
+.mainview__inner {
+    height: inherit;
+    margin-left: rem(10);
+    margin-right: rem(10);
+
+    @include mq(md) {
+        margin-left: rem(80);
+        margin-right: rem(80);
+    }
+}
+
+.mainview__wrapper {
+    height: inherit;
+
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.mainview__Swiper {
+    height: calc(100vh - rem(138));
+
+    @include mq(md) {
+        height: inherit;
+    }
+}
+
+.mainview__image {
+    height: inherit;
+    aspect-ratio: 355 / 480;
+    overflow: hidden;
+
+    @include mq(md) {
+        aspect-ratio: 1034 / 780;
+    }
+}
+
+.mainview__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainview__text {
+    font-size: rem(34);
+    font-weight: $bold;
+    margin-top: rem(20);
+
+    @include mq(md) {
+        font-size: rem(60);
+        writing-mode: vertical-rl;
+        margin-top: 0;
+        margin-left: rem(101);
+        letter-spacing: 0.065em;
+    }
+}
