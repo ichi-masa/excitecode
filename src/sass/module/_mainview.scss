@@ -2,13 +2,15 @@
 
 .mainview {
     width: 100%;
-    height: calc(100vh + rem(80));
+    height: calc(100vh);
     position: relative;
     top: rem(-80);
-
+    margin-bottom: rem(-80);
+    
     @include mq(md) {
         height: calc(100vh - rem(80));
-        top: 0;
+        top: rem(-100);
+        margin-bottom: rem(-100);
     }
 }
 
@@ -32,8 +34,9 @@
     }
 }
 
-.mainview__Swiper {
+.mainview__swiper {
     height: calc(100vh - rem(138));
+    width: inherit;
 
     @include mq(md) {
         height: inherit;

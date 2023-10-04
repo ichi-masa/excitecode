@@ -1,0 +1,91 @@
+@use "global" as *;
+
+
+.news-list {
+    display: block;
+}
+
+.news-list__wrapper {
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    border-bottom: 1px solid #E2E2E2;
+
+    @include mq(md) {
+        padding-top: rem(30);
+        padding-bottom: rem(30);
+    }
+}
+
+.news-list__header {
+    display: flex;
+    gap: rem(12);
+    align-items: flex-start;
+
+    @include mq(md) {
+        gap: rem(29);
+    }
+}
+
+.news-list__date {
+    font-size: rem(10);
+    font-weight: $bold;
+    color: $lightgray;
+    padding-top: rem(5); //他に方法ある？
+    
+    @include mq(md) {
+        font-size: rem(12);
+        padding-top: rem(3); //他に方法ある？
+    }
+}
+
+.news-list__tags {
+    display: flex;
+    gap: rem(6);
+    flex-wrap: wrap;
+
+    @include mq(md) {
+        gap: rem(20);
+    }
+}
+
+.news-list__tag {
+    font-size: rem(10);
+    font-weight: $medium;
+    color: $gray;
+    padding: rem(5) rem(15);
+    background-color: $white;
+    
+    @include mq(md) {
+        font-size: rem(11);
+        padding: rem(4) rem(18);
+    }
+}
+
+.news-list__title {
+    margin-top: rem(20);
+    font-size: rem(14);
+    font-weight: $medium;
+    line-height: 1.7;
+    position: relative;
+    display: inline-block;
+
+    @include mq(md) {
+        margin-top: rem(30);
+        font-size: rem(16);
+    }
+}
+
+.news-list__title::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: rem(1);
+    background-color: $black;
+    bottom: rem(-4);
+    left: 0;
+    transition: all 0.5s;
+}
+
+.news-list__title:hover::after {
+    width: 100%;
+}

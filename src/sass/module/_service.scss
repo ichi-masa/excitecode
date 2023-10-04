@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.service__title {
+    text-align: right;
+}
+
+.service__content {
+    margin-top: rem(20);
+}

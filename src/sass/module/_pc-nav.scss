@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .pc-nav {
-    height: inherit;
+    height: rem(80);
     font-family: $english-sub-font-family;
     color: $black;
     font-size: rem(16);

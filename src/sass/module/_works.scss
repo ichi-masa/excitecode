@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.works {
+    background-color: $beige-bg;
+}
+
+.works__content {
+    background-color: $white;
+    margin-top: rem(20);
+    padding-left: rem(40);
+    padding-right: rem(40);
+
+    @include mq(md) {
+        margin-top: rem(40);
+        padding-bottom: rem(80);
+        max-width: $inner;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.works__button {
+    margin-top: rem(41);
+    text-align: right;
+}

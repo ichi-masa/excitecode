@@ -13,6 +13,7 @@
 
 .button span {
     position: relative;
+    padding-right: rem(15);
 }
 
 .button span::before {
@@ -41,10 +42,10 @@
     border-top: 1px solid $navy-font;
     transform:  translateY(-50%) rotate(45deg);
     top: 50%;
-    right: rem(-10);
+    right: rem(5);
     transition: all 0.3s 0.3s;
 }
 
 .button span:hover::after {
-    right: rem(-12);
+    right: 0;
 }

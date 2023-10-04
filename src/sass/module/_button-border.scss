@@ -8,7 +8,7 @@
     font-weight: $medium;
     line-height: 1;
     font-family: $english-sub-font-family;
-    padding: rem(14) rem(39) rem(14) rem(24);
+    padding: rem(14) rem(20) rem(14) rem(24);
     border: 1px solid $navy;
     border-radius: rem(5);
 }
@@ -16,6 +16,7 @@
 
 .button-border span {
     position: relative;
+    padding-right: rem(15);
 }
 
 .button-border span::before {
@@ -44,10 +45,10 @@
     border-top: 1px solid $navy;
     transform:  translateY(-50%) rotate(45deg);
     top: 50%;
-    right: rem(-10);
+    right: rem(5);
     transition: all 0.3s 0.3s;
 }
 
 .button-border span:hover::after {
-    right: rem(-12);
+    right: 0;
 }

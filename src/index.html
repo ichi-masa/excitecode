@@ -31,6 +31,7 @@
   <script src="https://kit.fontawesome.com/5df2e98400.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="./assets/js/jquery.inview.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 
@@ -104,7 +105,7 @@
     <div class="mainview">
       <div class="mainview__inner">
         <div class="mainview__wrapper">
-          <div class="swiper mainview__Swiper">
+          <div class="swiper mainview__swiper js-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide mainview__image">
                 <picture>
@@ -139,10 +140,12 @@
       </div>
     </div>
 
+    <!-- about us -->
     <div class="about layout-about">
-      <p class="about__message">
-        Good life for Good Car Good life for Good Car Good life for Good Car
-      </p>
+      <div class="about__message">
+        <p class="about__message-text">Good life for Good Car</p>
+        <p class="about__message-text" aria-hidden="true">Good life for Good Car</p>
+      </div>
       <div class="about__content inner">
         <div class="about__image"><img src="./assets/images/common/about.jpg" alt=""></div>
         <div class="about__text-block">
@@ -157,68 +160,241 @@
       </div>
     </div>
 
-
-    <!-- section-title -->
-    <h2 class="section-title">
-      service
-    </h2>
-    <!-- service-card -->
-    <div class="service-card">
-      <div class="service-card__top">
-        <div class="service-card__title-block">
-          <div class="service-card__title-number">Service01</div>
-          <h3 class="service-card__title">購入サポート</h3>
+    <!-- service -->
+    <section class="service layout-service">
+      <div class="service__inner inner">
+        <h2 class="service__title section-title js-right-slide">
+          service
+        </h2>
+        <div class="service__content">
+          <ul class="service__items service-cards">
+            <li class="service__item service-card">
+              <div class="service-card__top">
+                <div class="service-card__title-block">
+                  <div class="service-card__title-number">Service01</div>
+                  <h3 class="service-card__title">購入サポート</h3>
+                </div>
+                <div class="service-card__image"><img src="./assets/images/common/service1.jpg" alt="白いスポーツカー"></div>
+              </div>
+              <div class="service-card__bottom">
+                <div class="service-card__text">
+                  国を超え、メーカーを超え、高級の本質をお届けする特別な一台との出会いをサポートします。
+                </div>
+                <div class="service-card__button">
+                  <a href="#" class="button-border">
+                    <span>read more</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="service__item service-card">
+              <div class="service-card__top">
+                <div class="service-card__title-block">
+                  <div class="service-card__title-number">Service02</div>
+                  <h3 class="service-card__title">修理・整備</h3>
+                </div>
+                <div class="service-card__image"><img src="./assets/images/common/service2.jpg" alt="車の整備をしている様子"></div>
+              </div>
+              <div class="service-card__bottom">
+                <div class="service-card__text">
+                  高度な輸入車修理技術と数多くの修理実績、熟練の技術・設備であなたの愛車を完全に直します。
+                </div>
+                <div class="service-card__button">
+                  <a href="#" class="button-border">
+                    <span>read more</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="service__item service-card">
+              <div class="service-card__top">
+                <div class="service-card__title-block">
+                  <div class="service-card__title-number">Service03</div>
+                  <h3 class="service-card__title">車検・点検</h3>
+                </div>
+                <div class="service-card__image"><img src="./assets/images/common/service3.jpg" alt="車の点検をしている様子"></div>
+              </div>
+              <div class="service-card__bottom">
+                <div class="service-card__text">
+                  輸入車の取り扱いが県内トップクラス。専門の整備工場へ任せたいなら弊社へご相談ください。
+                </div>
+                <div class="service-card__button">
+                  <a href="#" class="button-border">
+                    <span>read more</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="service-card__image"><img src="./assets/images/common/service1.jpg" alt="白いスポーツカー"></div>
       </div>
-      <div class="service-card__bottom">
-        <div class="service-card__text">
-          国を超え、メーカーを超え、高級の本質をお届けする特別な一台との出会いをサポートします。
-        </div>
-        <div class="service-card__border">
-          <a href="#" class="button-border">
+    </section>
+
+    <!-- works -->
+    <section class="works layout-works">
+      <div class="works__inner inner">
+        <h2 class="works__title section-title js-left-slide">
+          works
+        </h2>
+      </div>
+      <div class="works__content">
+        <ul class="works__items works-cards">
+          <li class="works__item works-card js-fadeDown">
+            <a href="#" class="works-card__link">
+              <div class="works-card__wrapper">
+                <div class="works-card__image">
+                  <img src="./assets/images/common/works1.jpg" alt="車の鍵を閉めている写真">
+                </div>
+                <div class="works-card__information">
+                  <div class="works-card__category">修理・整備</div>
+                  <h3 class="works-card__title">
+                    車のドアが開けられなくなった｜ドアロックの交換と...
+                  </h3>
+                  <div class="works-card__text u-desktop">
+                    弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
+                  </div>
+                  <time class="works-card__date" datetime="2022-09-02">2022.09.02</time>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="works__item works-card js-fadeDown">
+            <a href="#" class="works-card__link">
+              <div class="works-card__wrapper">
+                <div class="works-card__image">
+                  <img src="./assets/images/common/works2.jpg" alt="車の鍵を閉めている写真">
+                </div>
+                <div class="works-card__information">
+                  <div class="works-card__category">修理・整備</div>
+                  <h3 class="works-card__title">
+                    愛車のリアバンパーに傷がついた｜板金修理と塗装で...
+                  </h3>
+                  <div class="works-card__text u-desktop">
+                    弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
+                  </div>
+                  <time class="works-card__date" datetime="2022-09-02">2022.08.26</time>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="works__item works-card js-fadeDown">
+            <a href="#" class="works-card__link">
+              <div class="works-card__wrapper">
+                <div class="works-card__image">
+                  <img src="./assets/images/common/works3.jpg" alt="車の鍵を閉めている写真">
+                </div>
+                <div class="works-card__information">
+                  <div class="works-card__category">販売サポート</div>
+                  <h3 class="works-card__title">
+                    はじめて輸入車の購入を検討中のお客様｜憧れのBM...
+                  </h3>
+                  <div class="works-card__text u-desktop">
+                    弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
+                  </div>
+                  <time class="works-card__date" datetime="2022-09-02">2022.08.20</time>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="works__button">
+          <a href="#" class="button">
             <span>read more</span>
           </a>
         </div>
-      </div>
     </div>
+    </section>
 
-    <!-- works-card -->
-    <div class="works-card">
-      <div class="works-card__wrapper">
-        <div class="works-card__image">
-          <img src="./assets/images/common/works1.jpg" alt="車の鍵を閉めている写真">
-        </div>
-        <div class="works-card__information">
-          <div class="works-card__category">修理・整備</div>
-          <h3 class="works-card__title">
-            車のドアが開けられなくなった｜ドアロックの交換と...
-          </h3>
-          <div class="works-card__text u-desktop">
-            弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
+    <!-- news -->
+    <section class="news layout-news">
+      <div class="news__inner inner">
+        <div class="news__wrapper">
+          <div class="news__left">
+            <h2 class="news__title section-title js-left-slide">
+              news
+            </h2>
+            <ul class="news__category js-fadeUp">
+              <li class="news__menu js-colorChange">すべてのお知らせ</li>
+              <li class="news__menu js-colorChange">トピックス</li>
+              <li class="news__menu js-colorChange">イベント・キャンペーン</li>
+              <li class="news__menu js-colorChange">入庫車情報</li>
+            </ul>
           </div>
-          <time class="works-card__date" datetime="2022-09-02">2022.09.02</time>
+          <div class="news__right">
+            <div class="news__items">
+              <a href="#" class="news__item news-list">
+                <div class="news-list__wrapper js-fadeUp">
+                  <div class="news-list__header">
+                    <time class="news-list__date" datetime="2022-09-02">2022.09.02</time>
+                    <div class="news-list__tags">
+                      <div class="news-list__tag">トピックス</div>
+                      <div class="news-list__tag">イベント・キャンペーン</div>
+                    </div>
+                  </div>
+                  <h3 class="news-list__title">2022年10月8日・9日・10日の3日間、試乗車フェアを開催します</h3>
+                </div>
+              </a>
+              <a href="#" class="news__item news-list">
+                <div class="news-list__wrapper js-fadeUp">
+                  <div class="news-list__header">
+                    <time class="news__date" datetime="2022-09-02">2022.08.23</time>
+                    <div class="news-list__tags">
+                      <div class="news-list__tag">トピックス</div>
+                      <div class="news-list__tag">入庫車情報</div>
+                    </div>
+                  </div>
+                  <h3 class="news-list__title">【入庫車のご案内】メルセデスベンツG 350が入庫しました</h3>
+                </div>
+              </a>
+              <a href="#" class="news__item news-list">
+                <div class="news-list__wrapper js-fadeUp">
+                  <div class="news-list__header">
+                    <time class="news-list__date" datetime="2022-09-02">2022.08.07</time>
+                    <div class="news-list__tags">
+                      <div class="news-list__tag">トピックス</div>
+                    </div>
+                  </div>
+                  <h3 class="news-list__title">お盆休みのご案内</h3>
+                </div>
+              </a>
+              <a href="#" class="news__item news-list">
+                <div class="news-list__wrapper js-fadeUp">
+                  <div class="news-list__header">
+                    <time class="news-list__date" datetime="2022-09-02">2022.08.03</time>
+                    <div class="news-list__tags">
+                      <div class="news-list__tag">トピックス</div>
+                      <div class="news-list__tag">入庫車情報</div>
+                    </div>
+                  </div>
+                  <h3 class="news-list__title">【入庫車のご案内】JEEPラングラー アンリミテッド サハラが入庫しました</h3>
+                </div>
+              </a>
+              <a href="#" class="news__item news-list">
+                <div class="news-list__wrapper js-fadeUp">
+                  <div class="news-list__header">
+                    <time class="news-list__date" datetime="2022-09-02">2022.07.26</time>
+                    <div class="news-list__tags">
+                      <div class="news-list__tag">トピックス</div>
+                    </div>
+                  </div>
+                  <h3 class="news-list__title">半導体不足は輸入車・輸入中古車にどう影響するか</h3>
+                </div>
+              </a>
+            </div>
+            <div class="news__button">
+              <a href="#" class="button">
+                <span>read more</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- 下層ページのfv -->
-    <div class="page-fv">
-      <div class="page-fv__title-block">
-        <div class="page-fv__main-title">about</div>
-        <h2 class="page-fv__sub-title">私たちについて</h2>
-      </div>
-      <div class="page-fv__image"><img src="./assets/images/about/about-fv.jpg" alt="自動車展示場で車が並んでいる写真"></div>
-    </div>
-
-    <!-- readmore-button -->
-    <a href="#" class="button">
-      <span>read more</span>
-    </a>
-
+    </section>
+    
+    <!-- contact -->
     <section class="contact layout-contact">
       <div class="contact__flex">
-        <div class="contact__contents">
+        <div class="contact__content">
           <div class="contact__text">
             輸入車の購入や修理のご相談など<br>お気軽にお問い合わせください。
           </div>
@@ -242,6 +418,8 @@
       </div>
     </section>
   </main>
+
+  <!-- footer -->
   <footer class="footer layout-footer">
     <div class="footer__inner">
       <div class="footer__flex">
@@ -288,6 +466,20 @@
       </div>
     </div>
   </footer>
+
+  <!-- 下層ページのfv -->
+  <!-- <div class="page-fv">
+    <div class="page-fv__title-block">
+      <div class="page-fv__main-title">about</div>
+      <h2 class="page-fv__sub-title">私たちについて</h2>
+    </div>
+    <div class="page-fv__image"><img src="./assets/images/about/about-fv.jpg" alt="自動車展示場で車が並んでいる写真"></div>
+  </div> -->
+  
+  <!-- readmore-button -->
+  <!-- <a href="#" class="button">
+    <span>read more</span>
+  </a> -->
 </body>
 
 </html>

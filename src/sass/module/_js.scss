@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.js-left-slide {
+    opacity: 0;
+    transform: translateX(rem(-100));
+    transition: all 0.8s;
+}
+
+.js-left-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
+}
+
+.js-right-slide {
+    opacity: 0;
+    transform: translateX(rem(100));
+    transition: all 0.8s;
+}
+
+.js-right-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
+}
+
+.js-fadeDown {
+    opacity: 0;
+    transform: translateY(rem(-30));
+    transition: all 0.8s;
+}
+
+.js-fadeDown.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+}
+
+.js-fadeUp {
+    opacity: 0;
+    transform: translateY(rem(30));
+    transition: all 0.8s;
+}
+
+.js-fadeUp.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+}

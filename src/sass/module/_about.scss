@@ -3,36 +3,49 @@
 
 
 .about__message {
-    overflow: hidden;
-    width: 100%;
+    display: flex;
     white-space: nowrap;
+    overflow: hidden;
+    gap: rem(84);
+}
+.about__message-text {
+    animation: scrollAnime 20s linear infinite;
     font-size: rem(84);
     font-weight: $bold;
     color: $navy;
-    // animation: scrollAnime 20s linear infinite;
-
+    
     @include mq(md) {
         font-size: rem(150);
     }
 }
 
-// @keyframes scrollAnime {
-//     0% {
-//         transform: translateX(0);
-//     }
+@keyframes scrollAnime {
+    0% {
+        translate: 0;
+    }
 
-//     100% {
-//         transform: translateX(-100%);
-//     }
-// }
+    100% {
+        translate: calc(-100% - rem(84));
+    }
+}
 
 .about__content {
     margin-top: rem(20);
+    display: flex;
+    flex-direction: column;
+
+    @include mq(md) {
+        flex-direction: row;
+    }
 }
 
 .about__image {
     aspect-ratio: 335 / 292;
     overflow: hidden;
+
+    @include mq(md) {
+        width: 50%;
+    }
 }
 
 .about__image img {
@@ -43,6 +56,12 @@
 
 .about__text-block {
     margin-top: rem(30);
+
+    @include mq(md) {
+        margin-top: rem(70);
+        padding-left: rem(60);
+        width: 50%;
+    }
 }
 
 .about__title {
@@ -55,6 +74,11 @@
     font-size: rem(14);
     margin-top: rem(30);
     line-height: 2.375;
+
+    @include mq(md) {
+        font-size: rem(16);
+        margin-top: rem(40);
+    }
 }
 
 .about__button {

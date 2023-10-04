@@ -6,6 +6,10 @@
     height: rem(80);
     position: relative;
     z-index: 5;
+
+    @include mq(md) {
+        height: rem(180);
+    }
 }
 
 .header__logo {

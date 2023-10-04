@@ -1,24 +1,31 @@
 @use "global" as *;
 
 .works-card {
-    width: rem(295); //仮
+    background-color: $white;
+    padding-top: rem(30);
+    padding-bottom: rem(30);
+    border-bottom: 1px solid #E2E2E2;
 
     @include mq(md) {
-        width: rem(1020); //仮
+        padding-top: rem(50);
+        padding-bottom: trm(50);
     }
 }
 
 .works-card__wrapper {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between; //仮
 }
 
 .works-card__image {
     aspect-ratio: 120 / 90;
     overflow: hidden;
+    width: 40.4780%;
 
     @include mq(md) {
         aspect-ratio: 290 /229;
+        width: 28.4313%;
     }
 }
 
@@ -29,9 +36,11 @@
 }
 
 .works-card__information {
+    width: 53.2204%;
     margin-left: rem(18);
 
     @include mq(md) {
+        width: 66.6667%;
         margin-left: rem(50);
     }
 }
@@ -55,16 +64,33 @@
     font-weight: $medium;
     line-height: 2;
     margin-top: rem(12);
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    display: inline-block;
+    position: relative;
+    // overflow: hidden;
+    // display: -webkit-box;
+    // -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 3;
 
     @include mq(md) {
         font-size: rem(24);
         margin-top: rem(30);
-        -webkit-line-clamp: 1;
+        // -webkit-line-clamp: 1;
     }
+}
+
+.works-card__title::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: rem(1);
+    background-color: $black;
+    bottom: rem(-4);
+    left: 0;
+    transition: all 0.5s;
+}
+
+.works-card__title:hover::after {
+    width: 100%;
 }
 
 .works-card__text {

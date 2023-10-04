@@ -26,9 +26,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
 
-
     // mainview スライダー（Swiper）//
-    const mvSwiper = new Swiper(".mainview__Swiper", {
+    const mvSwiper = new Swiper(".js-swiper", {
         loop: true,
         effect: 'slide',
         direction: 'vertical',
@@ -37,6 +36,34 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             disableOnInteraction: false
         },
         speed: 2000,
+    });
+
+    // スクロールして表示領域に入ったらクラス付与 //
+    $(function () {
+        // セクションタイトルのスライドイン //
+        $(".js-left-slide").on("inview", function () {
+            $(this).addClass("active");
+        });
+
+        $(".js-right-slide").on("inview", function () {
+            $(this).addClass("active");
+        });
+
+        // 記事を上からふわっと表示 //
+        $(".js-fadeDown").on("inview", function () {
+            $(this).addClass("active");
+        });
+        
+        // 記事を下からふわっと表示 //
+        $(".js-fadeUp").on("inview", function () {
+            $(this).addClass("active");
+        });
+    });
+
+    $(function() {
+        $(".news__menu").click(function() {
+            $(this).toggleClass("active");
+        });
     });
 
 });
