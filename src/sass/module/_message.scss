@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.message__inner.inner {
+
+    @include mq(md) {
+        max-width: rem(840);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.message__title {
+    font-size: rem(18);
+    font-weight: $medium;
+    line-height: 2.0556;
+
+    @include mq(md) {
+        font-size: rem(40);
+        line-height: 1.5;
+    }
+}
+
+.message__text {
+    margin-top: rem(30);
+    font-size: rem(14);
+    line-height: 2.2857;
+
+    @include mq(md) {
+        margin-top: rem(40);
+        font-size: rem(16);
+    }
+    
+}

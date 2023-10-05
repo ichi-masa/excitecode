@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.about-title__japanese {
+    font-size: rem(12);
+    font-weight: $bold;
+    color: $navy-font;
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
+}
+
+.about-title__english span {
+    font-family: $english-main-font-family;
+    font-size: rem(26);
+    font-weight: $bold;
+    text-transform: capitalize;
+    position: relative;
+
+    @include mq(md) {
+        font-size: rem(40);
+    }
+}
+
+.about-title__english span::after {
+    content: '';
+    position: absolute;
+    width: rem(60);
+    height: rem(2);
+    background-color: $black;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rem(-70);
+
+    @include mq(md) {
+        right: rem(-80);
+    } 
+}

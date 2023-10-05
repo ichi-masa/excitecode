@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.about-access__information {
+    margin-top: rem(20);
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+
+    @include mq(md) {
+        margin-top: rem(8);
+        flex-direction: row;
+        gap: rem(20);
+    }
+}
+
+.about-access__address {
+    font-size: rem(14);
+    font-weight: $normal;
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
+}
+
+.about-access__map {
+    margin-top: rem(20);
+    aspect-ratio: 335 / 540;
+    overflow: hidden;
+
+    @include mq(md) {
+        margin-top: rem(60);
+        aspect-ratio: 1100 / 400;
+    }
+}
+
+.about-access__map iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

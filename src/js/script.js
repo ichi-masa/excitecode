@@ -38,6 +38,22 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         speed: 2000,
     });
 
+    const aboutSwiper = new Swiper(".js-about-swiper", {
+        loop: true,
+        slidesPerView: 2.05,
+        spaceBetween: 4,
+        speed: 5000,
+        autoplay: {
+            delay: 0,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2.96,
+                spaceBetween: 10,
+            },
+        },
+    });
+    
     // スクロールして表示領域に入ったらクラス付与 //
     $(function () {
         // セクションタイトルのスライドイン //
@@ -60,8 +76,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
     });
 
+
+    // newsのカテゴリーのクリックアニメーション //
     $(function() {
         $(".news__menu").click(function() {
+            $(this).toggleClass("active");
+        });
+        $(".archive-home__menu").click(function() {
             $(this).toggleClass("active");
         });
     });

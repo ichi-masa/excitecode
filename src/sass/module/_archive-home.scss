@@ -1,10 +1,6 @@
 @use "global" as *;
 
-.news {
-    background-color: $beige-bg;
-}
-
-.news__wrapper {
+.archive-home__wrapper {
     display: flex;
     flex-direction: column;
 
@@ -13,43 +9,46 @@
     }
 }
 
-.news__left {
+.archive-home__left {
     @include mq(md) {
-        width: 24%;
+        width: 24%;  
     }
 }
 
-.news__category {
-    margin-top: rem(40);
+.archive-home__sticky {
+    position: sticky;
+    top: rem(20);
+}
+
+.archive-home__category {
     padding-left: rem(20);
     padding-right: rem(20);
-    display: flex;
-    flex-wrap: wrap;
-    gap: rem(15) rem(40);
+    display: grid;
+    gap: rem(15);
     
     @include mq(md) {
-        margin-top: rem(45);
         padding-left: 0;
         padding-right: 0;
-        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr);
         gap: rem(20);
     }
 }
 
-.news__menu {
+.archive-home__menu {
     font-size: rem(12);
     font-weight: $medium;
     color: $lightgray;
     padding-left: rem(20);
     position: relative;
     cursor: pointer;
+    white-space: nowrap;
     
     @include mq(md) {
         font-size: rem(14);
     }
 }
 
-.news__menu::before {
+.archive-home__menu::before {
     content: '';
     position: absolute;
     width: rem(8);
@@ -61,16 +60,16 @@
     opacity: 0;
 }
 
-.news__menu.active {
+.archive-home__menu.active {
     color: $black;
 }
 
-.news__menu.active::before {
+.archive-home__menu.active::before {
     opacity: 1;
 }
 
-.news__right {
-    margin-top: rem(40);
+.archive-home__right {
+    margin-top: rem(38);
     padding-left: rem(20);
     padding-right: rem(20);
     
@@ -83,7 +82,7 @@
     }
 }
 
-.news__items {
+.archive-home__items {
     border-top: 1px solid #E2E2E2;
     display: flex;
     flex-direction: column;
@@ -97,11 +96,12 @@
     }
 }
 
-.news__button {
-    margin-top: rem(45);
-    text-align: right;
+.archive-home__pagination {
+    text-align: center;
+    margin-top: rem(40);
 
     @include mq(md) {
-        margin-top: rem(40);
+        margin-top: rem(56);
+        text-align-last: left;
     }
 }

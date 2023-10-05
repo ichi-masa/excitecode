@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.layout-about-company {
+    margin-top: rem(80);
+    padding-top: rem(60);
+    padding-bottom: rem(80);
+
+    @include mq(md) {
+        margin-top: rem(120);
+        padding-top: rem(70);
+        padding-bottom: rem(120);
+    }
+}

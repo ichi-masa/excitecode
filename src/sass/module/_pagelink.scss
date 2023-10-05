@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.pagelink__items {
+    display: flex;
+    justify-content: center;
+
+    @include mq(md) {
+        gap: rem(60);
+    }
+}
+
+.pagelink__item {
+    font-size: rem(12);
+    color: $navy;
+    position: relative;
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
+}
+
+.pagelink__item a {
+    display: block;
+    padding-left: rem(20);
+    padding-right: rem(35);
+    position: relative;
+
+    @include mq(md) {
+        padding-left: rem(30);
+        padding-right: rem(49);
+    }
+}
+
+.pagelink__item a::after {
+    content: '';
+    position: absolute;
+    width: rem(6.5);
+    height: rem(6.5);
+    border-top: 1px solid $navy;
+    border-left: 1px solid $navy;
+    top: 50%;
+    right: rem(20);
+    transform: translateY(-50%) rotate(-135deg) ;
+}

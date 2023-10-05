@@ -6,12 +6,12 @@
 }
 
 .news-list__wrapper {
-    padding-top: rem(20);
+    // padding-top: rem(20);
     padding-bottom: rem(20);
     border-bottom: 1px solid #E2E2E2;
 
     @include mq(md) {
-        padding-top: rem(30);
+        // padding-top: rem(30);
         padding-bottom: rem(30);
     }
 }
@@ -61,31 +61,49 @@
     }
 }
 
+
+.news-list__tag--bg {
+    background-color: $beige-bg;
+}
+
 .news-list__title {
     margin-top: rem(20);
     font-size: rem(14);
     font-weight: $medium;
     line-height: 1.7;
     position: relative;
-    display: inline-block;
-
+    // display: inline-block;
+    display: -webkit-box; // hover効かない??
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    transition: all 0.5s;
+    
     @include mq(md) {
         margin-top: rem(30);
         font-size: rem(16);
+        -webkit-line-clamp: 1;
     }
 }
 
 .news-list__title::after {
     content: '';
     position: absolute;
-    width: 0;
+    // width: 0;
     height: rem(1);
     background-color: $black;
     bottom: rem(-4);
     left: 0;
     transition: all 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.news-list__title:hover {
+    opacity: 0.5;
 }
 
 .news-list__title:hover::after {
-    width: 100%;
+    transform: scaleX(1);
 }
+

@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.breadcrumb__inner{
+    margin-right: rem(10);
+    
+    @include mq(md) {
+        margin-right: rem(60);
+    }
+}
+
+.breadcrumb__menu {
+    text-align: right;
+    font-family: $english-sub-font-family;
+    font-size: rem(11);
+
+    @include mq(md) {
+        font-size: rem(15);
+    }
+}
