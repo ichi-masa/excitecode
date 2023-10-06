@@ -1,5 +1,13 @@
 @use "global" as *;
 
 .works-cards {
+    padding-top: rem(30);
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
 
+    @include mq(md) {
+        padding-top: rem(50);
+        gap: rem(50);
+    }
 }

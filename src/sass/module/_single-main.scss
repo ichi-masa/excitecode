@@ -1,0 +1,134 @@
+@use "global" as *;
+
+.single-main {
+    @include mq(md) {
+        width: 64.7581%;
+    }
+}
+
+.single-main__inner.inner {
+    padding-left: rem(30);
+    padding-right: rem(30);
+}
+
+.single-main__title {
+    margin-top: rem(10);
+    font-size: rem(18);
+    font-weight: $medium;
+    line-height: 1.6667;
+
+    @include mq(md) {
+        margin-top: rem(20);
+        font-size: rem(26);
+        line-height: 1.9231;
+    }
+}
+
+.single-main__image {
+    margin-top: rem(40);
+    aspect-ratio: 315 / 176;
+    overflow: hidden;
+}
+
+.single-main__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.single-main__detail-content {
+    margin-top: rem(48);
+}
+
+.single-main__detail-content h2 {
+    font-size: rem(16);
+    font-weight: $medium;
+    padding-top: rem(8);
+    padding-bottom: rem(8);
+    padding-left: rem(11);
+    background-color: #F8F9F9;
+    position: relative;
+
+    @include mq(md) {
+        font-size: rem(22);
+    }
+}
+
+.single-main__detail-content h2::before {
+    content: '';
+    position: absolute;
+    width: rem(3);
+    height: 100%;
+    background-color: $navy-font;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.single-main__detail-content p {
+    margin-top: rem(40);
+    font-size: rem(14);
+    line-height: 2;
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
+}
+
+.single-main__detail-content p + p {
+    margin-top: rem(32);
+}
+
+.single-main__detail-content h3 {
+    margin-top: rem(40);
+    font-size: rem(18);
+    font-weight: $medium;
+    text-indent: rem(13);
+    padding-bottom: rem(8);
+    // border-bottom: 1px solid #E4E4E4;
+    position: relative;
+}
+
+.single-main__detail-content h3::after {
+    content: '';
+    position: absolute;
+    width: rem(120);
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px solid $navy-font;
+}
+
+.single-main__detail-content ul {
+    margin-top: rem(22);
+
+    @include mq(md) {
+        margin-top: rem(72);
+    }
+}
+
+.single-main__detail-content div {
+    border-top: 1px solid #E4E4E4;
+    padding-bottom: 0;
+    
+    @include mq(md) {
+        padding-bottom: rem(40);
+        border-bottom: 1px solid #E4E4E4;
+    }
+}
+
+.single-main__detail-content li {
+    font-size: rem(14);
+    list-style: disc inside;
+}
+
+
+.single-main__button {
+    margin-top: rem(48);
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}

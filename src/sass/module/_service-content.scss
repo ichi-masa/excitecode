@@ -128,9 +128,14 @@
 .service-content__features-title span {
     font-family: $japanese-font-family;
     font-size: rem(10);
+    margin-left: rem(9);
     font-weight: $medium;
     color: $gray;
-    margin-left: rem(9);
+
+    @include mq(md) {
+        font-size: rem(12);
+        margin-left: rem(16);
+    }
 }
 
 .service-content__features-text {

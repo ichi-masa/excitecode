@@ -30,41 +30,20 @@
     font-size: rem(10);
     font-weight: $bold;
     color: $lightgray;
+    
+    @include mq(md) {
+        font-size: rem(11);
+    }
+}
+
+.news-list__date--padding {
     padding-top: rem(5); //他に方法ある？
     
     @include mq(md) {
-        font-size: rem(12);
         padding-top: rem(3); //他に方法ある？
     }
 }
 
-.news-list__tags {
-    display: flex;
-    gap: rem(6);
-    flex-wrap: wrap;
-
-    @include mq(md) {
-        gap: rem(20);
-    }
-}
-
-.news-list__tag {
-    font-size: rem(10);
-    font-weight: $medium;
-    color: $gray;
-    padding: rem(5) rem(15);
-    background-color: $white;
-    
-    @include mq(md) {
-        font-size: rem(11);
-        padding: rem(4) rem(18);
-    }
-}
-
-
-.news-list__tag--bg {
-    background-color: $beige-bg;
-}
 
 .news-list__title {
     margin-top: rem(20);

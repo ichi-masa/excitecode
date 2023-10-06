@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.single-button__prev-button,
+.single-button__next-button {
+    padding: rem(12) rem(24);
+    border: 1px solid $navy-font;
+    border-radius: rem(5);
+    color: $navy-font;
+}
+
+.single-button__prev-button span,
+.single-button__next-button span {
+    font-size: rem(14);
+    font-weight: $medium;
+}
+
+.single-button__prev-button span {
+    padding-left: rem(15);
+    position: relative;
+}
+
+.single-button__next-button span {
+    padding-right: rem(15);
+    position: relative;
+}
+
+.single-button__prev-button span::after {
+    position: absolute;
+    content: '';
+    width: rem(6.5);
+    height: rem(6.5);
+    border-left: 1px solid $navy-font;
+    border-top: 1px solid $navy-font;
+    transform:  translateY(-50%) rotate(-45deg);
+    top: 50%;
+    left: rem(5);
+    transition: all 0.3s 0.3s;
+}
+
+.single-button__prev-button span:hover::after {
+    left: 0;
+}
+
+.single-button__next-button span::after {
+    position: absolute;
+    content: '';
+    width: rem(6.5);
+    height: rem(6.5);
+    border-right: 1px solid $navy-font;
+    border-top: 1px solid $navy-font;
+    transform:  translateY(-50%) rotate(45deg);
+    top: 50%;
+    right: rem(5);
+    transition: all 0.3s 0.3s;
+}
+
+.single-button__next-button span:hover::after {
+    right: 0;
+}

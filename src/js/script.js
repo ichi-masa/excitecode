@@ -82,7 +82,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $(".news__menu").click(function() {
             $(this).toggleClass("active");
         });
-        $(".archive-home__menu").click(function() {
+        $(".archive__menu").click(function() {
             $(this).toggleClass("active");
         });
     });
