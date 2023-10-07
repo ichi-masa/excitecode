@@ -2,6 +2,7 @@
 
 .single-button__prev-button,
 .single-button__next-button {
+    display: inline-block;
     padding: rem(12) rem(24);
     border: 1px solid $navy-font;
     border-radius: rem(5);

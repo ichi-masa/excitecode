@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.page-form__item:not(:first-child) {
+    margin-top: rem(30);
+    
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.page-form__item dt {
+    font-size: rem(15);
+    font-weight: $medium;
+}
+
+.page-form__item dt sup,
+.page-form__item dd sup {
+    color: #E20000;
+    vertical-align: top;
+}
+
+.page-form__item dt span {
+    display: block;
+    margin-top: rem(10);
+    font-size: rem(14);
+    font-weight: $normal;
+}
+
+.page-form__select {
+    position: relative;
+    width: 100%;
+}
+
+.page-form__select::after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8.5px solid #000;
+    content: '';
+    position: absolute;
+    top: 55%;
+    right: rem(22);
+    width: 0;
+}
+
+.page-form__button {
+    margin-top: rem(40);
+    text-align: center;
+}

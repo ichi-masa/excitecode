@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.page-complete__inner.inner {
+    @include mq(md) {
+        max-width: calc(rem(640) + $padding-pc * 2);
+    }
+}
+
+.page-complete__title-main {
+    font-family: $english-main-font-family;
+    font-size: rem(24);
+    font-weight: $bold;
+    text-transform: uppercase;
+
+    @include mq(md) {
+        max-zoom: rem(40);
+    }
+}
+
+.page-complete__title-sub {
+    margin-top: rem(10);
+    font-size: rem(14);
+    font-weight: rem($medium);
+
+    @include mq(md) {
+        margin-top: rem(20);
+        font-size: rem(18);
+    }
+}
+
+.page-complete__text {
+    margin-top: rem(30);
+    font-size: rem(14);
+    line-height: 2.2857;
+
+    @include mq(md) {
+        margin-top: rem(40);
+        font-size: rem(16);
+        line-height: 2.375;
+    }
+}
+
+.page-complete__button {
+    margin-top: rem(40);
+    text-align: center;
+}
+
+.page-complete__button .single-button__prev-button {
+    padding: rem(11.5) rem(95);
+    background-color: $navy;
+    color: $white;
+    border: none;
+
+    @include mq(md) {
+        padding: rem(20) rem(185);
+        font-size: rem(18);
+    }
+}
+
+.page-complete__button .single-button__prev-button span::after {
+    border-left: 1px solid $white;
+    border-top: 1px solid $white;
+}
