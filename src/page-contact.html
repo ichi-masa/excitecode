@@ -35,13 +35,13 @@
 
 <body>
   <header class="header">
-    <div class="header__logo">
+    <h1 class="header__logo">
       <a href="#">
         <div class="header__logo-color">
           <img src="./assets/images/common/logo-white.png" alt="ExciteCode">
         </div>
       </a>
-    </div>
+    </h1>
     <div class="header__nav-button hamburger u-mobile">
       <span></span>
       <span></span>
@@ -97,67 +97,105 @@
       </div>
     </div> <!-- header__pc-nav -->
   </header>
+  <main>
 
-  <!-- パンくず -->
-  <div class="breadcrumb layout-breadcrumb">
-    <div class="breadcrumb__inner">
-      <div class="breadcrumb__menu">
-        パンくずリスト
+    <!-- 下層ページのメインビュー -->
+    <div class="sub-fv layout-sub-fv">
+      <div class="sub-fv__inner">
+        <div class="suv-fv__content">
+          <div class="sub-fv__title-wrapper">
+            <div class="sub-fv__title">
+              <div class="sub-fv__main-title">contact</div>
+              <h1 class="sub-fv__sub-title">お問い合わせ</h1>
+            </div>
+          </div>
+          <div class="sub-fv__image">
+            <picture>
+              <source srcset="./assets/images/contact/contact-fv.jpg" media="(min-width:768px)">
+              <img src="./assets/images/contact/contact-fv_sp.jpg" alt="">
+            </picture>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- single-works -->
-  <div class="single-works layout-single-works">
-    <div class="single-works__inner inner">
-      <div class="single-works__title-block">
-        <div class="single-works__tags tags">
-          <div class="single-works__tag tag">修理・整備</div>
+    <!-- パンくず -->
+    <div class="breadcrumb layout-breadcrumb">
+      <div class="breadcrumb__inner">
+        <div class="breadcrumb__menu">
+          パンくずリスト
         </div>
-        <h1 class="single-works__title">
-          車のドアが開けられなくなった｜ドアロックの交換と車両の点検
-        </h1>
-        <time class="single-works__date news-list__date" datetime="2022-09-02">2022.09.02</time>
       </div>
-      <div class="single-works__image">
-        <img src="./assets/images/works/works-article1_large.jpg" alt="">
-      </div>
-      <div class="single-works__content">
-        <p>
-          本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。<br>本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。
+    </div>
+
+
+    <div class="page-contact layout-page-contact">
+      <div class="page-contact__inner inner">
+        <p class="page-contact__text">
+          弊社へのお問い合わせは<br>下記フォームより受け付けております。<br>担当者が確認後、折り返しご連絡させていただきます。
         </p>
-      </div>
-      <div class="single-works__button single-button">
-        <a href="#" class="single-button__prev-button"><span>実績一覧へ戻る</span></a>
+        <div class="page-contact__content page-form">
+          <form action="" method="post" id="">
+            <dl class="page-form__item">
+              <dt>
+                会社名<span><sup>*</sup>個人の場合は「個人」と入力してください</span>
+              </dt>
+              <dd>
+                <input type="text" name="company" value="" />
+              </dd>
+            </dl>
+            <dl class="page-form__item">
+              <dt>
+                ご担当者名<span><sup>*</sup>個人の場合は氏名を入力してください</span>
+              </dt>
+              <dd>
+                <input type="text" name="name" value="" />
+              </dd>
+            </dl>
+            <dl class="page-form__item">
+              <dt>
+                電話番号<sup>*</sup>
+              </dt>
+              <dd>
+                <input type="text" name="tel" value="" />
+              </dd>
+            </dl>
+            <dl class="page-form__item">
+              <dt>
+                メールアドレス<sup>*</sup>
+              </dt>
+              <dd>
+                <input type="email" name="mail_address" value="" class="validate[]" />
+              </dd>
+            </dl>
+            <dl class="page-form__item">
+              <dt>
+                お問い合わせの種類<sup>*</sup>
+              </dt>
+              <dd class="">
+                <select name="hoge" class="">
+                  <option value="">選択してください</option>
+                  <option value="セレクト1">セレクト1</option>
+                  <option value="セレクト2">セレクト2</option>
+                </select>
+              </dd>
+            </dl>
+            <dl class="page-form__item">
+              <dt>
+                お問い合わせ内容<sup>*</sup>
+              </dt>
+              <dd>
+                <textarea name="contents"></textarea>
+              </dd>
+            </dl>
+            <div class="">
+              <input type="button" class="" value="タイプ：ボタン" />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- contact -->
-  <section class="contact layout-contact">
-    <div class="contact__flex">
-      <div class="contact__content">
-        <div class="contact__text">
-          輸入車の購入や修理のご相談など<br>お気軽にお問い合わせください。
-        </div>
-        <div class="contact__button button-colorchange">
-          <a href="#" class="button-colorchange__contact">
-            <span>
-              <i class="fa-regular fa-envelope"></i>お問い合わせ
-            </span>
-          </a>
-        </div>
-        <div class="contact__button contact__button--tel button-colorchange">
-          <a href="#" class="button-colorchange__contact">
-            <span>
-              <i class="fa-solid fa-phone"></i>0000-000-000
-            </span>
-          </a>
-        </div>
-        <div class="contact__reception">受付時間 : 火曜日を除く 10：00〜18：00</div>
-      </div>
-      <div class="contact__image"><img src="./assets/images/common/contact.jpg" alt="新車が整然と並んでいる写真"></div>
-    </div>
-  </section>
+  </main>
 
   <!-- footer -->
   <footer class="footer layout-footer">

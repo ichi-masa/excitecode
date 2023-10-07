@@ -1,0 +1,83 @@
+@use "global" as *;
+
+.page-404__fv {
+    position: relative;
+}
+
+.page-404 .sub-fv__content {
+    position: relative;
+}
+
+.page-404 .sub-fv__image {
+    aspect-ratio: 365 / 243;
+
+    @include mq(md) {
+        aspect-ratio: 1270 / 600;
+    }
+}
+
+.page-404__title {
+    color: $white;
+    font-weight: $bold;
+    font-family: $english-main-font-family;
+    font-size: rem(35);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-transform: capitalize;
+
+    @include mq(md) {
+        font-size: rem(70);
+        transform: translate(0, -100%);
+    }
+}
+
+.page-404__text-block {
+    margin-top: rem(40);
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+
+    @include mq(md) {
+        margin-top: rem(20);
+        padding-left: 0;
+        padding-right: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+.page-404__text {
+    font-size: rem(14);
+    font-weight: $medium;
+    line-height: 2.2857;
+
+    @include mq(md) {
+        color: $white;
+        font-size: rem(16);
+    }
+}
+
+.page-404__button {
+    margin-top: rem(40);
+    text-align: center;
+
+    @include mq(md) {
+        margin-top: rem(20);
+        text-align: left;
+    }
+}
+
+.page-404__button .single-button__prev-button {
+    @include mq(md) {
+        color: $white;
+        border: 1px solid $white;
+    }
+}
+
+.page-404__button .single-button__prev-button span::after {
+    border-left: 1px solid $white;
+    border-top: 1px solid $white;
+}

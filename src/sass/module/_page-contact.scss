@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.page-contact__inner.inner {
+    @include mq(md) {
+        max-width: calc(rem(640) + $padding-pc * 2);
+    }
+}
+
+.page-contact__text {
+    font-size: rem(14);
+    line-height: 2.2857;
+    
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: 2.375;
+    }
+}
+
+.page-contact__content {
+    margin-top: rem(40);
+
+    @include mq(md) {
+        margin-top: rem(100);
+    }
+}

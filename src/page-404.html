@@ -35,13 +35,13 @@
 
 <body>
   <header class="header">
-    <div class="header__logo">
+    <h1 class="header__logo">
       <a href="#">
         <div class="header__logo-color">
           <img src="./assets/images/common/logo-white.png" alt="ExciteCode">
         </div>
       </a>
-    </div>
+    </h1>
     <div class="header__nav-button hamburger u-mobile">
       <span></span>
       <span></span>
@@ -98,69 +98,33 @@
     </div> <!-- header__pc-nav -->
   </header>
 
-  <!-- パンくず -->
-  <div class="breadcrumb layout-breadcrumb">
-    <div class="breadcrumb__inner">
-      <div class="breadcrumb__menu">
-        パンくずリスト
-      </div>
-    </div>
-  </div>
+  <main>
 
-  <!-- single-works -->
-  <div class="single-works layout-single-works">
-    <div class="single-works__inner inner">
-      <div class="single-works__title-block">
-        <div class="single-works__tags tags">
-          <div class="single-works__tag tag">修理・整備</div>
+    <div class="page-404 layout-page-404">
+      <div class="page-404__fv sub-fv">
+        <div class="sub-fv__inner">
+          <div class="suv-fv__content">
+            <div class="sub-fv__image">
+              <picture>
+                <source srcset="./assets/images/404/404_main.jpg" media="(min-width:768px)">
+                <img src="./assets/images/404/404-main_sp.jpg" alt="">
+              </picture>
+            </div>
+            <h1 class="page-404__title">404 not found</h1>
+          </div>
         </div>
-        <h1 class="single-works__title">
-          車のドアが開けられなくなった｜ドアロックの交換と車両の点検
-        </h1>
-        <time class="single-works__date news-list__date" datetime="2022-09-02">2022.09.02</time>
-      </div>
-      <div class="single-works__image">
-        <img src="./assets/images/works/works-article1_large.jpg" alt="">
-      </div>
-      <div class="single-works__content">
-        <p>
-          本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。<br>本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。本文がここに入ります。
-        </p>
-      </div>
-      <div class="single-works__button single-button">
-        <a href="#" class="single-button__prev-button"><span>実績一覧へ戻る</span></a>
+        <div class="page-404__text-block">
+          <p class="page-404__text">お探しのページはURLが誤っているか、削除された可能性があります。<br>3秒後にTOPページに遷移します</p>
+          <div class="page-404__button single-button">
+            <a href="#" class="single-button__prev-button"><span>TOPへ戻る</span></a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- contact -->
-  <section class="contact layout-contact">
-    <div class="contact__flex">
-      <div class="contact__content">
-        <div class="contact__text">
-          輸入車の購入や修理のご相談など<br>お気軽にお問い合わせください。
-        </div>
-        <div class="contact__button button-colorchange">
-          <a href="#" class="button-colorchange__contact">
-            <span>
-              <i class="fa-regular fa-envelope"></i>お問い合わせ
-            </span>
-          </a>
-        </div>
-        <div class="contact__button contact__button--tel button-colorchange">
-          <a href="#" class="button-colorchange__contact">
-            <span>
-              <i class="fa-solid fa-phone"></i>0000-000-000
-            </span>
-          </a>
-        </div>
-        <div class="contact__reception">受付時間 : 火曜日を除く 10：00〜18：00</div>
-      </div>
-      <div class="contact__image"><img src="./assets/images/common/contact.jpg" alt="新車が整然と並んでいる写真"></div>
-    </div>
-  </section>
+  </main>
 
   <!-- footer -->
-  <footer class="footer layout-footer">
+  <footer class="footer layout-footer layout-footer--contact">
     <div class="footer__inner">
       <div class="footer__flex">
         <nav class="footer__nav">

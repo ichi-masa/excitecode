@@ -9,3 +9,11 @@
         padding-bottom: rem(54);
     }
 }
+
+.layout-footer--contact {
+    margin-top: rem(80);
+
+    @include mq(md) {
+        margin-top: rem(120);
+    }
+}
