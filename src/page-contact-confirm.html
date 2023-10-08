@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>ExciteCode</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="”icon”" href="" />
+  <!-- css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script src="https://kit.fontawesome.com/5df2e98400.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="./assets/js/jquery.inview.min.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__logo">
+      <a href="#">
+        <div class="header__logo-color">
+          <img src="./assets/images/common/logo-white.png" alt="ExciteCode">
+        </div>
+      </a>
+    </h1>
+    <div class="header__nav-button hamburger u-mobile">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- header__sp-nav -->
+    <nav class="header__sp-nav sp-nav u-mobile">
+      <div class="sp-nav__inner">
+        <ul class="sp-nav__items">
+          <li class="sp-nav__item"><a href="#" class="sp-nav__link">top</a></li>
+          <li class="sp-nav__item"><a href="#" class="sp-nav__link">about</a></li>
+          <li class="sp-nav__item"><a href="#" class="sp-nav__link">service</a></li>
+          <li class="sp-nav__item"><a href="#" class="sp-nav__link">works</a></li>
+          <li class="sp-nav__item"><a href="#" class="sp-nav__link">news</a></li>
+          <li class="sp-nav__item"><a href="#" class="sp-nav__link">contact</a></li>
+          <li class="sp-nav__item"><a href="#" class="sp-nav__link">プライバシーポリシー</a></li>
+        </ul>
+        <div class="sp-nav__sns">
+          <div class="sp-nav__icon">
+            <a href="#">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+          <div class="sp-nav__icon">
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+          <div class="sp-nav__icon">
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav> <!-- header__sp-nav -->
+
+    <div class="header__circle-bg"></div>
+
+    <!-- header__pc-nav -->
+    <div class="header__pc-nav pc-nav u-desktop">
+      <div class="pc-nav__inner">
+        <ul class="pc-nav__items">
+          <li class="pc-nav__item"><a href="#" class="pc-nav__link">top</a></li>
+          <li class="pc-nav__item"><a href="#" class="pc-nav__link">about</a></li>
+          <li class="pc-nav__item"><a href="#" class="pc-nav__link">service</a></li>
+          <li class="pc-nav__item"><a href="#" class="pc-nav__link">works</a></li>
+          <li class="pc-nav__item"><a href="#" class="pc-nav__link">news</a></li>
+          <li class="pc-nav__item"><a href="#" class="pc-nav__link pc-nav__link-contact"><span><i
+                  class="fa-regular fa-envelope"></i></span>contact</a></li>
+        </ul>
+      </div>
+    </div> <!-- header__pc-nav -->
+  </header>
+  <main>
+
+    <!-- 下層ページのメインビュー -->
+    <div class="sub-fv layout-sub-fv">
+      <div class="sub-fv__inner">
+        <div class="suv-fv__content">
+          <div class="sub-fv__title-wrapper">
+            <div class="sub-fv__title">
+              <div class="sub-fv__main-title">contact</div>
+              <h1 class="sub-fv__sub-title">お問い合わせ</h1>
+            </div>
+          </div>
+          <div class="sub-fv__image">
+            <picture>
+              <source srcset="./assets/images/contact/contact-fv.jpg" media="(min-width:768px)">
+              <img src="./assets/images/contact/contact-fv_sp.jpg" alt="">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- パンくず -->
+    <div class="breadcrumb layout-breadcrumb">
+      <div class="breadcrumb__inner">
+        <div class="breadcrumb__menu">
+          パンくずリスト
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-contact layout-page-contact page-contact--confirm">
+      <div class="page-contact__inner inner">
+        <p class="page-contact__text">
+          入力内容をご確認ください。
+        </p>
+        <div class="page-contact__content page-form">
+          <dl class="page-form__item page-form__item--confirm">
+            <dt>
+              会社名<sup>*</sup>
+            </dt>
+            <dd>
+              株式会社ABC
+            </dd>
+          </dl>
+          <dl class="page-form__item page-form__item--confirm">
+            <dt>
+              ご担当者名<sup>*</sup>
+            </dt>
+            <dd>
+              輸入車　太郎
+            </dd>
+          </dl>
+          <dl class="page-form__item page-form__item--confirm">
+            <dt>
+              電話番号<sup>*</sup>
+            </dt>
+            <dd>
+              022-000-0000
+            </dd>
+          </dl>
+          <dl class="page-form__item page-form__item--confirm">
+            <dt>
+              メールアドレス<sup>*</sup>
+            </dt>
+            <dd>
+              abcdefghijk@excitecode.co.jp
+            </dd>
+          </dl>
+          <dl class="page-form__item page-form__item--confirm">
+            <dt>
+              お問い合わせの種類<sup>*</sup>
+            </dt>
+            <dd>
+              購入サポートについて
+            </dd>
+          </dl>
+          <dl class="page-form__item page-form__item--confirm">
+            <dt>
+              お問い合わせの内容<sup>*</sup>
+            </dt>
+            <dd class="page-form__textarea">
+              お問い合わせ内容がここにはいります。お問い合わせ内容がここにはいります。お問い合わせ内容がここにはいります。お問い合わせ内容がここにはいります。お問い合わせ内容がここにはいります。お問い合わせ内容がここにはいります。
+            </dd>
+          </dl>
+          <div class="page-form__button">
+            <div class="single-button">
+              <a href="#" class="single-button__prev-button single-button__prev-button--return"><span>戻る</span></a>
+            </div>
+            <div class="single-button">
+              <a href="#" class="single-button__prev-button single-button__prev-button--send"><span>送信する</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer layout-footer layout-footer--contact">
+    <div class="footer__inner">
+      <div class="footer__flex">
+        <nav class="footer__nav">
+          <ul class="footer__items">
+            <li class="footer__item"><a href="#" class="footer__link">top</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">about</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">service</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">works</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">news</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">contact</a></li>
+            <li class="footer__item"><a href="#" class="sp-nav__link">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+        <div class="footer__bottom">
+          <div class="footer__logo-block">
+            <div class="footer__logo">
+              <a href="#">
+                <img src="./assets/images/common/logo-navy.png" alt="ExciteCode">
+              </a>
+            </div>
+            <div class="footer__sns">
+              <div class="footer__icon">
+                <a href="#">
+                  <i class="fa-brands fa-facebook fa-2x"></i>
+                </a>
+              </div>
+              <div class="footer__icon">
+                <a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </div>
+              <div class="footer__icon">
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <small class="footer__copy-right">
+            &copy;&nbsp;2022&nbsp;ExciteCode&nbsp;Automobile
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+
+</html>

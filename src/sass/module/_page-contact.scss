@@ -23,3 +23,9 @@
         margin-top: rem(100);
     }
 }
+
+.page-contact--confirm .inner {
+    @include mq(md) {
+        max-width: calc(rem(680) + $padding-pc * 2);
+    }
+}

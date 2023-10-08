@@ -13,6 +13,10 @@
     font-weight: $medium;
 }
 
+.page-form__item dd {
+    font-size: rem(14);
+}
+
 .page-form__item dt sup,
 .page-form__item dd sup {
     color: #E20000;
@@ -45,4 +49,42 @@
 .page-form__button {
     margin-top: rem(40);
     text-align: center;
+}
+
+.page-form__textarea {
+    line-height: 2.2857;
+}
+
+.page-form__item--confirm {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(md) {
+        flex-direction: row;
+    }
+}
+
+.page-form__item--confirm dt {
+    @include mq(md) {
+        width: 28.2353%;
+    }
+}
+
+.page-form__item--confirm dd{
+    margin-top: rem(10);
+
+    @include mq(md) {
+        margin-top: 0;
+        width: 71.7647%;
+    }
+}
+
+.page-contact--confirm .page-form__button {
+    display: flex;
+    gap: rem(23);
+    text-align: center;
+
+    @include mq(md) {
+        gap: rem(80);
+    }
 }

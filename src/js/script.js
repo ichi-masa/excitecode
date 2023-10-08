@@ -31,10 +31,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         loop: true,
         effect: 'slide',
         direction: 'vertical',
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false
-        },
+        // autoplay: {
+        //     delay: 2000,
+        //     disableOnInteraction: false
+        // },
         speed: 2000,
     });
 

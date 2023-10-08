@@ -16,7 +16,7 @@
 
 .button-border span {
     position: relative;
-    padding-right: rem(15);
+    padding-right: rem(16);
 }
 
 .button-border span::before {
@@ -45,7 +45,7 @@
     border-top: 1px solid $navy;
     transform:  translateY(-50%) rotate(45deg);
     top: 50%;
-    right: rem(5);
+    right: rem(2);
     transition: all 0.3s 0.3s;
 }
 

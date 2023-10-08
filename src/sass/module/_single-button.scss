@@ -18,11 +18,13 @@
 .single-button__prev-button span {
     padding-left: rem(15);
     position: relative;
+    white-space: nowrap;
 }
 
 .single-button__next-button span {
     padding-right: rem(15);
     position: relative;
+    white-space: nowrap;
 }
 
 .single-button__prev-button span::after {
@@ -57,4 +59,39 @@
 
 .single-button__next-button span:hover::after {
     right: 0;
+}
+
+.single-button__prev-button--return span,
+.single-button__prev-button--send span {
+    padding-left: 0;
+
+    @include mq(md) {
+        font-size: rem(18);
+    }
+}
+
+.single-button__prev-button--return span::after,
+.single-button__prev-button--send span::after {
+    content: none;
+}
+
+
+.single-button__prev-button--return {
+    padding: rem(12.5) rem(60.5);
+    line-height: 1;
+
+    @include mq(md) {
+        padding: rem(23) rem(121);
+    }
+}
+
+.single-button__prev-button--send {
+    padding: rem(12.5) rem(46.5);
+    line-height: 1;
+    background-color: $navy;
+    color: $white;
+
+    @include mq(md) {
+        padding: rem(23) rem(107);
+    }
 }

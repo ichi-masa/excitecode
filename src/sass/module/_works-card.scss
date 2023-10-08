@@ -65,6 +65,7 @@
     @include mq(md) {
         font-size: rem(24);
         margin-top: rem(30);
+        line-height: 1.5;
         // -webkit-line-clamp: 1;
     }
 }

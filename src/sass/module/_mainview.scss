@@ -39,15 +39,16 @@
 
 .mainview__swiper {
     height: calc(100vh - rem(138));
-    width: inherit;
-
+    
     @include mq(md) {
         height: inherit;
+        width: 100%;
     }
 }
 
 .mainview__image {
     height: inherit;
+    width: inherit;
     aspect-ratio: 355 / 480;
     overflow: hidden;
 
@@ -66,12 +67,20 @@
     font-size: rem(34);
     font-weight: $bold;
     margin-top: rem(20);
-
+    display: flex;
+    flex-direction: column;
+    
     @include mq(md) {
         font-size: rem(60);
         writing-mode: vertical-rl;
         margin-top: 0;
         margin-left: rem(101);
         letter-spacing: 0.065em;
+        gap: rem(25);
+        line-height: 1;
     }
+}
+
+.mainview__text span {
+    white-space: nowrap;
 }
